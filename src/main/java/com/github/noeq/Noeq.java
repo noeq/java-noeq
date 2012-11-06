@@ -22,11 +22,11 @@ public class Noeq
         public final String address;
         public final int    port;
 
-        //        public Server(String address, int port)
-        //        {
-        //            this.address = address;
-        //            this.port = port;
-        //        }
+        //public Server(String address, int port)
+        //{
+        //    this.address = address;
+        //    this.port = port;
+        //}
 
         public Server(String pair)
         {
@@ -36,6 +36,23 @@ public class Noeq
         }
     }
 
+    /**
+     * Initialize a Noeq connection to a list of comma-delimited host:port adresses
+     * 
+     * @param token
+     * @param addresses
+     */
+    public Noeq(String token, String addresses)
+    {
+        this(token, addresses.split(","));
+    }
+
+    /**
+     * Initialize a Noeq connection to an array of host:port address strings
+     * 
+     * @param token
+     * @param addresses
+     */
     public Noeq(String token, String... addresses)
     {
         if (token == null)
