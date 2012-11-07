@@ -3,6 +3,9 @@ java-noeq
 
 java client library for noeqd
 
+	Noeq client = new Noeq("", "localhost:4444");
+	long[] ids = client.get(10);
+
 links
 =====
 

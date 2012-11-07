@@ -5,7 +5,7 @@
 	<artifactId>noeq</artifactId>
 	<packaging>jar</packaging>
 	<name>noeq</name>
-	<version>1.0</version>
+	<version>1.0.1</version>
 	<description>Noeq is a java client library to connect to the noeqd GUID generation service.</description>
 	<url>http://github.com/noeq</url>
 

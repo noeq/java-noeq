@@ -25,13 +25,16 @@ public class TestNoeq
     @Test
     public void testGet()
     {
-        final Noeq client;
+        final Noeq client = new Noeq("", "localhost:4444");
         try
         {
-            client = new Noeq("", "localhost:4444");
             client.connect();
         }
         catch (IOException e)
+        {
+            throw new SkipException("Can't connect to noeqd at localhost:4444");
+        }
+        if (!client.isConnected())
         {
             throw new SkipException("Can't connect to noeqd at localhost:4444");
         }
